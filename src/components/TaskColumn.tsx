@@ -220,7 +220,12 @@ export function TaskColumn({
                 <Typography
                   variant="body2"
                   color="text.secondary"
-                  sx={{ lineHeight: 1.5, maxWidth: 264, textWrap: 'pretty' }}
+                  sx={{
+                    lineHeight: 1.5,
+                    maxWidth: 264,
+                    textWrap: 'pretty',
+                    wordSpacing: '100vw',
+                  }}
                 >
                   {emptyStateCopy.description}
                 </Typography>
