@@ -227,7 +227,7 @@ export default function App() {
                     <Stack
                       direction={{ xs: 'column', md: 'row' }}
                       spacing={{ xs: 1.25, md: 2 }}
-                      alignItems={{ xs: 'flex-start', md: 'center' }}
+                      alignItems={{ xs: 'flex-start', md: 'baseline' }}
                     >
                       <Typography
                         variant="h5"
