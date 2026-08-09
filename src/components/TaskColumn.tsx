@@ -43,7 +43,7 @@ const EMPTY_STATE_COPY: Record<
   todo: {
     eyebrow: 'Ready to begin',
     title: 'The next task starts here.',
-    description: 'Add tasks to stay focused and maintain momentum.',
+    description: 'Add tasks to build momentum.',
   },
   in_progress: {
     eyebrow: 'Work in motion',
