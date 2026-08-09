@@ -306,7 +306,6 @@ export default function App() {
                     <Chip label={`${stats.total} total`} variant="outlined" size="small" />
                     <Chip label={`${stats.active} active`} color="secondary" variant="outlined" size="small" />
                     <Chip label={`${stats.done} done`} color="secondary" variant="outlined" size="small" />
-                    <Chip label={`Theme: ${preference}`} variant="outlined" size="small" />
                   </Stack>
 
                   <Button
