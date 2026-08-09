@@ -43,17 +43,17 @@ const EMPTY_STATE_COPY: Record<
   todo: {
     eyebrow: 'Ready to begin',
     title: 'The next task starts here.',
-    description: 'Add tasks to stay focused and build momentum.',
+    description: 'Add tasks to stay focused and maintain momentum.',
   },
   in_progress: {
     eyebrow: 'Work in motion',
     title: 'Nothing is moving just yet.',
-    description: 'Move tasks here as you start working on them.',
+    description: 'Move tasks here as work gets underway.',
   },
   done: {
     eyebrow: 'Closed loop',
     title: 'Completed work will live here.',
-    description: 'Mark tasks as done to build a record of progress.',
+    description: 'Mark tasks as done to track progress.',
   },
 }
 
@@ -220,12 +220,7 @@ export function TaskColumn({
                 <Typography
                   variant="body2"
                   color="text.secondary"
-                  sx={{
-                    lineHeight: 1.5,
-                    maxWidth: 264,
-                    textWrap: 'pretty',
-                    wordSpacing: '100vw',
-                  }}
+                  sx={{ lineHeight: 1.5, maxWidth: 264, textWrap: 'pretty' }}
                 >
                   {emptyStateCopy.description}
                 </Typography>
