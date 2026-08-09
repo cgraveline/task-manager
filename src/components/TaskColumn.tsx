@@ -236,7 +236,9 @@ export function TaskColumn({
                   >
                     Add task
                   </Button>
-                ) : null}
+                ) : (
+                  <Box sx={{ minHeight: 'calc(24px + 0.5rem)' }} />
+                )}
               </Stack>
             </Stack>
           </Paper>
