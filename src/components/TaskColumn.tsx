@@ -92,9 +92,9 @@ export function TaskColumn({
         <Stack
           direction="row"
           justifyContent="space-between"
-          alignItems="flex-start"
+          alignItems="center"
           spacing={1.75}
-          sx={{ minHeight: 58 }}
+          sx={{ height: 58 }}
         >
           <Stack spacing={0.5}>
             <Stack direction="row" spacing={1.1} alignItems="center">
