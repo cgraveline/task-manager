@@ -2,6 +2,8 @@
 
 A polished React + TypeScript + MUI task board with local persistence, theme control, tests, and Cypress coverage.
 
+**[View the live demo](https://cgraveline.github.io/task-manager/)**
+
 ## Setup
 
 ```bash
