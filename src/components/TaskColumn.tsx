@@ -42,21 +42,18 @@ const EMPTY_STATE_COPY: Record<
 > = {
   todo: {
     eyebrow: 'Ready to begin',
-    title: 'The next meaningful task starts here.',
-    description:
-      'Capture a clear piece of work so the board begins with focus, context, and visible momentum.',
+    title: 'The next task starts here.',
+    description: 'Add tasks to stay focused and build momentum.',
   },
   in_progress: {
     eyebrow: 'Work in motion',
     title: 'Nothing is moving just yet.',
-    description:
-      'Move a task here when work is underway so progress feels active, current, and easy to follow.',
+    description: 'Move tasks here as you start working on them.',
   },
   done: {
     eyebrow: 'Closed loop',
     title: 'Completed work will live here.',
-    description:
-      'Finished tasks create a clean record of progress and make completed work easy to scan and trust.',
+    description: 'Mark tasks as done to build a record of progress.',
   },
 }
 
