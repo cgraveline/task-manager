@@ -159,17 +159,6 @@ export function TaskColumn({
                 onStatusChange={onStatusChange}
               />
             ))}
-            {status === 'todo' && onAddTask ? (
-              <Button
-                size="small"
-                startIcon={<AddRoundedIcon />}
-                onClick={onAddTask}
-              >
-                Add task
-              </Button>
-            ) : (
-              <Box sx={{ minHeight: 36 }} />
-            )}
           </Stack>
         ) : (
           <Paper
@@ -238,6 +227,16 @@ export function TaskColumn({
                 >
                   {emptyStateCopy.description}
                 </Typography>
+                {status === 'todo' && onAddTask ? (
+                  <Button
+                    size="small"
+                    startIcon={<AddRoundedIcon />}
+                    onClick={onAddTask}
+                    sx={{ mt: 0.5 }}
+                  >
+                    Add task
+                  </Button>
+                ) : null}
               </Stack>
             </Stack>
           </Paper>
