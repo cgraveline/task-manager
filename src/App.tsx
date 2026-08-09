@@ -287,18 +287,6 @@ export default function App() {
                   </ToggleButtonGroup>
                 </Stack>
 
-                <Button
-                  startIcon={<AddRoundedIcon />}
-                  onClick={openCreateDialog}
-                  variant="contained"
-                  sx={{
-                    alignSelf: { xs: 'center', sm: 'flex-end' },
-                    width: { xs: '100%', sm: 'auto' },
-                  }}
-                >
-                  Add Task
-                </Button>
-
                 <Divider />
 
                 <Stack
@@ -306,11 +294,31 @@ export default function App() {
                   spacing={1}
                   useFlexGap
                   flexWrap="wrap"
+                  justifyContent="space-between"
+                  alignItems={{ xs: 'stretch', sm: 'center' }}
                 >
-                  <Chip label={`${stats.total} total`} variant="outlined" size="small" />
-                  <Chip label={`${stats.active} active`} color="secondary" variant="outlined" size="small" />
-                  <Chip label={`${stats.done} done`} color="secondary" variant="outlined" size="small" />
-                  <Chip label={`Theme: ${preference}`} variant="outlined" size="small" />
+                  <Stack
+                    direction={{ xs: 'column', sm: 'row' }}
+                    spacing={1}
+                    useFlexGap
+                    flexWrap="wrap"
+                  >
+                    <Chip label={`${stats.total} total`} variant="outlined" size="small" />
+                    <Chip label={`${stats.active} active`} color="secondary" variant="outlined" size="small" />
+                    <Chip label={`${stats.done} done`} color="secondary" variant="outlined" size="small" />
+                    <Chip label={`Theme: ${preference}`} variant="outlined" size="small" />
+                  </Stack>
+
+                  <Button
+                    startIcon={<AddRoundedIcon />}
+                    onClick={openCreateDialog}
+                    variant="contained"
+                    sx={{
+                      width: { xs: '100%', sm: 'auto' },
+                    }}
+                  >
+                    Add Task
+                  </Button>
                 </Stack>
               </Stack>
             </Paper>
