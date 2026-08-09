@@ -24,7 +24,7 @@ export function DeleteDialog({ task, open, onClose, onConfirm }: DeleteDialogPro
       <DialogTitle>
         <Stack direction="row" spacing={1.5} alignItems="center">
           <DeleteForeverRoundedIcon color="error" />
-          <Typography variant="h6">Delete task?</Typography>
+          <Typography variant="h6">Delete Task?</Typography>
         </Stack>
       </DialogTitle>
       <DialogContent>
@@ -45,7 +45,7 @@ export function DeleteDialog({ task, open, onClose, onConfirm }: DeleteDialogPro
             }
           }}
         >
-          Delete task
+          Delete Task
         </Button>
       </DialogActions>
     </Dialog>

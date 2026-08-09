@@ -89,10 +89,10 @@ export function TaskDialog({
         <DialogTitle>
           <Stack spacing={0.75}>
             <Typography variant="h6">
-              {mode === 'create' ? 'Create task' : 'Edit task'}
+             {mode === 'create' ? 'Create Task' : 'Edit Task'}
             </Typography>
             <Typography variant="body2" color="text.secondary">
-              Keep the work item crisp and actionable.
+              Keep work items crisp and actionable.
             </Typography>
           </Stack>
         </DialogTitle>
@@ -138,7 +138,7 @@ export function TaskDialog({
           <Button onClick={onClose} color="inherit" variant="text">
             Cancel
           </Button>
-          <Button type="submit">Save task</Button>
+          <Button type="submit">Save Task</Button>
         </DialogActions>
       </Box>
     </Dialog>

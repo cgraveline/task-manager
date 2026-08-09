@@ -213,9 +213,9 @@ export default function App() {
             >
               <Stack spacing={2.25}>
                 <Stack
-                  direction={{ xs: 'column', lg: 'row' }}
+                  direction="row"
                   justifyContent="space-between"
-                  alignItems={{ xs: 'flex-start', lg: 'center' }}
+                  alignItems="flex-start"
                   spacing={2}
                 >
                   <Box
@@ -233,7 +233,7 @@ export default function App() {
                         variant="h5"
                         sx={{ fontWeight: 800, letterSpacing: -0.04, lineHeight: 1.1 }}
                       >
-                        Task manager
+                        Task Manager
                       </Typography>
                       <Typography
                         variant="body2"
@@ -245,60 +245,59 @@ export default function App() {
                     </Stack>
                   </Box>
 
-                  <Stack
-                    direction={{ xs: 'column', sm: 'row' }}
-                    spacing={1.25}
-                    alignItems={{ xs: 'stretch', sm: 'center' }}
+                  <ToggleButtonGroup
+                    exclusive
+                    value={preference}
+                    onChange={(_, nextPreference: ThemePreference | null) => {
+                      if (nextPreference) {
+                        setPreference(nextPreference)
+                      }
+                    }}
+                    aria-label="Theme preference"
+                    size="small"
+                    sx={{ flexShrink: 0 }}
                   >
-                    <ToggleButtonGroup
-                      exclusive
-                      value={preference}
-                      onChange={(_, nextPreference: ThemePreference | null) => {
-                        if (nextPreference) {
-                          setPreference(nextPreference)
-                        }
-                      }}
-                      aria-label="Theme preference"
-                      size="small"
-                    >
-                      <Tooltip title="Use system theme" placement="top">
-                        <ToggleButton
-                          value="system"
-                          aria-label="Use system theme"
-                          title="Use system theme"
-                        >
-                          <SettingsBrightnessRoundedIcon fontSize="small" />
-                        </ToggleButton>
-                      </Tooltip>
-                      <Tooltip title="Use light theme" placement="top">
-                        <ToggleButton
-                          value="light"
-                          aria-label="Use light theme"
-                          title="Use light theme"
-                        >
-                          <LightModeRoundedIcon fontSize="small" />
-                        </ToggleButton>
-                      </Tooltip>
-                      <Tooltip title="Use dark theme" placement="top">
-                        <ToggleButton
-                          value="dark"
-                          aria-label="Use dark theme"
-                          title="Use dark theme"
-                        >
-                          <DarkModeRoundedIcon fontSize="small" />
-                        </ToggleButton>
-                      </Tooltip>
-                    </ToggleButtonGroup>
-
-                    <Button
-                      startIcon={<AddRoundedIcon />}
-                      onClick={openCreateDialog}
-                      variant="contained"
-                    >
-                      Add task
-                    </Button>
-                  </Stack>
+                    <Tooltip title="Use system theme" placement="top">
+                      <ToggleButton
+                        value="system"
+                        aria-label="Use system theme"
+                        title="Use system theme"
+                      >
+                        <SettingsBrightnessRoundedIcon fontSize="small" />
+                      </ToggleButton>
+                    </Tooltip>
+                    <Tooltip title="Use light theme" placement="top">
+                      <ToggleButton
+                        value="light"
+                        aria-label="Use light theme"
+                        title="Use light theme"
+                      >
+                        <LightModeRoundedIcon fontSize="small" />
+                      </ToggleButton>
+                    </Tooltip>
+                    <Tooltip title="Use dark theme" placement="top">
+                      <ToggleButton
+                        value="dark"
+                        aria-label="Use dark theme"
+                        title="Use dark theme"
+                      >
+                        <DarkModeRoundedIcon fontSize="small" />
+                      </ToggleButton>
+                    </Tooltip>
+                  </ToggleButtonGroup>
                 </Stack>
+
+                <Button
+                  startIcon={<AddRoundedIcon />}
+                  onClick={openCreateDialog}
+                  variant="contained"
+                  sx={{
+                    alignSelf: { xs: 'center', sm: 'flex-end' },
+                    width: { xs: '100%', sm: 'auto' },
+                  }}
+                >
+                  Add Task
+                </Button>
 
                 <Divider />
 
